@@ -20,7 +20,8 @@ model, assembles candidate pockets at several buriedness and score levels, and r
 second LightGBM model trained on a leakage-controlled, LIGYSIS-style BioLiP2 set. There are no
 neural networks. It runs on CPU (NumPy/Numba) and GPU (PyTorch/Triton) with identical output, has an
 AlphaFold mode (`--af-mode`) that uses pLDDT to prune low-confidence regions, and takes multi-chain
-assemblies as input. Method: [docs/METHOD.md](docs/METHOD.md); full report: [docs/REPORT.md](docs/REPORT.md).
+assemblies as input. Method: [docs/METHOD.md](docs/METHOD.md); full report: [docs/REPORT.md](docs/REPORT.md);
+manuscript (PLOS Computational Biology format, with supplements): [manuscript/](manuscript/).
 
 ## Headline results (test sets, pre-registered; honest caveats below)
 
@@ -150,6 +151,8 @@ output floor; typically 6–9 pockets per chain). Example: `examples/expected/de
 | `docs/` | method, pre-registration, evaluation protocol, benchmarks, performance, the full report, and the agents' research record (`docs/research_record/`: research tree and decision log, literature review, design, process lessons) |
 | `examples/` | two small structures (PDB 1A28 chain A, CC0; AFDB AF-P00918-F1, CC-BY-4.0) and expected outputs |
 | `PROMPT.md`, `prompts/`, `AGENT_SETUP.md` | the human prompts (verbatim) and the agent setup |
+| `manuscript/` | the manuscript (`main.pdf`), supplements S1–S3 Text and S1 Table, figures with their data and plotting script, Markdown sources and build script, and the agents' manuscript review and reference check; [manuscript/README.md](manuscript/README.md) |
+| `baselines/`, `reviews/` | baseline run notes and independent review records cited by the manuscript |
 
 **Building on BURROW:** [docs/FOR_FURTHER_DEVELOPMENT.md](docs/FOR_FURTHER_DEVELOPMENT.md) (code map, every pocket representation via `pocketdetect.burrow.export`, practical learnings).
 
@@ -183,8 +186,8 @@ for one redacted local file-system path.
 If you use BURROW, please cite (placeholder until publication):
 
 ```
-BURROW authors (2026). BURROW: fast, analytical protein pocket detection and ranking, developed
-autonomously by AI agents. Manuscript in preparation. <repository URL>
+BURROW authors (2026). BURROW: a fast protein pocket finder and ranker, designed, built and
+benchmarked end to end by AI agents. Manuscript in preparation. https://github.com/zoidpuff/burrow
 ```
 
 Please also cite the datasets and tools listed in [DATA.md](DATA.md) and the methods whose ideas
