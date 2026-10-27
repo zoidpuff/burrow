@@ -1,0 +1,122 @@
+{
+ "utc": "2026-10-27T07:36:39Z",
+ "commit": "949ca6c7b17f1bab9409afcbda1ce05afba4288a",
+ "dirty": false,
+ "version": "v2",
+ "final": false,
+ "benchmark": "af_set",
+ "method": "desc.v2_naive_all_s0",
+ "prediction_code_commit": "0d925b2d5bb27f4e028cf7bd2eccd9cd18d7a71d",
+ "scoring_files_sha256": {
+  "src/pocketdetect/evaluate.py": "0ff2e4027048f11426ac839fd78d72dec9e1606b6d093d53a3a5e3bd47a55e47",
+  "src/pocketdetect/ligands.py": "92c30622b3aa0140e63ecc0350f84901e6859a60686011e8a32d0e6d896a299a",
+  "src/pocketdetect/site_eval.py": "e331476e57ed318173bb0612a1d48473749b4fdc3c200e73756b653b6fd7e4e1",
+  "src/pocketdetect/sites.py": "a7843e8d0334a452673f798abeb84f63c221927789d29389d1f4db1e9b6ba75c",
+  "src/pocketdetect/benchmarks.py": "e7921f9e19fef0d73dc2c005f97e1274e466002312560cc7b0d46e297f25114f",
+  "src/pocketdetect/clusters.py": "cf497348077e108224ddfe95183dc9947a796a020a9c53f44cf1ea1302f96dc9",
+  "src/pocketdetect/structure.py": "c1898b99108f030d0f7be7f72eb02407708819d7bb12636f20921ca75d22cab6",
+  "src/pocketdetect/ligysis.py": "74e62e3c76466c4422fdaa6b3bb0e83ff866b2f40ee804d6a31fcbae633e79fa",
+  "src/pocketdetect/af_eval.py": "1b92ba02df22341a443bcd35610cb7849c440dbd281e662cf00e4af6de27fa9d",
+  "src/pocketdetect/prereg.py": "cdff6a50b155eadaa8d68dd19113bb771b65dd87f7d37423337b32cd3b48f134",
+  "src/pocketdetect/controls.py": "576eb39adbd6a06d5600207e9ccdabf1261b4c3732863eccc4d748afe0dd04df",
+  "src/pocketdetect/seeds.py": "a73ebba00a049d20449017ce4fa7576a2cda052164d5102ea30692f6d006501d",
+  "scripts/eval_dimer.py": "4c7bbd9f518fd54bf43c5758382a66bb8f1468a3b7a7becba09fc2795836cb7b",
+  "scripts/run_test_eval.py": "c3acb0102b29856dfd457d93540ffc7a16bba6ed49d905d2330e7d4169ccbc7a",
+  "scripts/run_prereg_analysis.py": "7d340a20b46b82eaa931cfccd5bc5409a50d871d10cb1962c37127ebaf519ba3",
+  "docs/PREREG.md": "59c7e41ef2f29900fb50e0582ff851dccd93da4a33585e6c89fe3c299aba8c37"
+ },
+ "models": {
+  "models/burrow_all_default_s0.json": "0fa4da97c64cc40fb739b87c38372813aa721d52f37a538d3c57dbc8bfc30f56"
+ },
+ "code_sha256": {
+  "src/pocketdetect/evaluate.py": "0ff2e4027048f11426ac839fd78d72dec9e1606b6d093d53a3a5e3bd47a55e47",
+  "src/pocketdetect/ligands.py": "92c30622b3aa0140e63ecc0350f84901e6859a60686011e8a32d0e6d896a299a",
+  "src/pocketdetect/site_eval.py": "e331476e57ed318173bb0612a1d48473749b4fdc3c200e73756b653b6fd7e4e1",
+  "src/pocketdetect/sites.py": "a7843e8d0334a452673f798abeb84f63c221927789d29389d1f4db1e9b6ba75c",
+  "src/pocketdetect/benchmarks.py": "e7921f9e19fef0d73dc2c005f97e1274e466002312560cc7b0d46e297f25114f",
+  "src/pocketdetect/clusters.py": "cf497348077e108224ddfe95183dc9947a796a020a9c53f44cf1ea1302f96dc9"
+ },
+ "code_sha256_combined": "0b55e5f59b97593a699f1d3717dc1f712e94d26fae59d3ac6a37844ef6466104",
+ "prereg_sha256": "59c7e41ef2f29900fb50e0582ff851dccd93da4a33585e6c89fe3c299aba8c37",
+ "gt_sha256": "8eb2a05afe20eb9592102e40e2a821fbd721bb38fc8170795002dbb80743661c",
+ "seed": 20261026,
+ "n_boot": 1000,
+ "argv": [
+  "scripts/run_test_eval.py",
+  "--benchmark",
+  "af_set",
+  "--pred-dir",
+  "results/test/descriptive_v2code/preds/af_set/desc.v2_naive_all_s0/preds",
+  "--method",
+  "desc.v2_naive_all_s0",
+  "--version",
+  "v2",
+  "--model",
+  "models/burrow_all_default_s0.json",
+  "--code-commit",
+  "0d925b2d5bb27f4e028cf7bd2eccd9cd18d7a71d",
+  "--n-boot",
+  "1000"
+ ],
+ "preds_sha256": "e770e154852cc885fe110e804138a7e8d9ae86d0e16f7633f172f27c89a6da35",
+ "n_pred_files": 2526,
+ "evaluation": {
+  "benchmark": {
+   "name": "af_set",
+   "kind": "sites",
+   "path": "data/processed/gt/af_set/sites.tsv",
+   "cluster_sources": [
+    "af_set"
+   ],
+   "headline": [
+    "recall_topn2",
+    "recall_ldca_topn2",
+    "P1K",
+    "hallucination_rate_topn2",
+    "hallucination_rate"
+   ],
+   "split": "test",
+   "rules": "p2rank_strict",
+   "criteria": [
+    "DCA4",
+    "DCC4"
+   ],
+   "note": "PREREG O5 (scripts/build_gt_af.py from Track C)",
+   "extras": [
+    "hallucination"
+   ]
+  },
+  "gt_path": "data/processed/gt/af_set/sites.tsv",
+  "pred_dir": "results/test/descriptive_v2code/preds/af_set/desc.v2_naive_all_s0/preds",
+  "n_boot": 1000,
+  "seed": 20261026,
+  "n_pred_missing": 0,
+  "headline": {
+   "recall_topn2": {
+    "value": 0.6354967702245463,
+    "ci_low": 0.61647894564134,
+    "ci_high": 0.6548464207459356
+   },
+   "recall_ldca_topn2": {
+    "value": 0.4779801324503311,
+    "ci_low": 0.45683508159982605,
+    "ci_high": 0.49916006017732084
+   },
+   "P1K": {
+    "value": 0.604,
+    "ci_low": 0.556,
+    "ci_high": 0.663
+   },
+   "hallucination_rate_topn2": {
+    "value": 0.02797266514806378,
+    "ci_low": 0.024139615219913108,
+    "ci_high": 0.032085174897419154
+   },
+   "hallucination_rate": {
+    "value": 0.04849967618910556,
+    "ci_low": 0.04394864456130911,
+    "ci_high": 0.05326821588320595
+   }
+  }
+ }
+}

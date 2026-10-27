@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# data and generated outputs (rebuilt with scripts/data/, never committed)
+/data/
+/tools/
+/outputs/
+/results/dev/cache/
+*.npz
+*.npy
+*.pt
+*.pkl
+*.pickle
+*.log
+*.points.csv
+*.tar
+*.tar.gz
+*.zip
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# shipped on purpose (do not ignore)
+!models/
+!predictions/
+!benchmarks/
+!examples/
+
+# local environment files and release-check patterns (never commit)
+.env
+.env.*
+.release_patterns.local
+.cache/
+*.nbi
+*.nbc

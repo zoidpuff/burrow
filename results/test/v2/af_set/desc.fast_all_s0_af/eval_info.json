@@ -1,0 +1,59 @@
+{
+ "benchmark": {
+  "name": "af_set",
+  "kind": "sites",
+  "path": "data/processed/gt/af_set/sites.tsv",
+  "cluster_sources": [
+   "af_set"
+  ],
+  "headline": [
+   "recall_topn2",
+   "recall_ldca_topn2",
+   "P1K",
+   "hallucination_rate_topn2",
+   "hallucination_rate"
+  ],
+  "split": "test",
+  "rules": "p2rank_strict",
+  "criteria": [
+   "DCA4",
+   "DCC4"
+  ],
+  "note": "PREREG O5 (scripts/build_gt_af.py from Track C)",
+  "extras": [
+   "hallucination"
+  ]
+ },
+ "gt_path": "data/processed/gt/af_set/sites.tsv",
+ "pred_dir": "results/test/descriptive_fastcode/preds/af_set/desc.fast_all_s0_af/preds",
+ "n_boot": 1000,
+ "seed": 20261026,
+ "n_pred_missing": 0,
+ "headline": {
+  "recall_topn2": {
+   "value": 0.6597969855429099,
+   "ci_low": 0.6401094386600465,
+   "ci_high": 0.6799524370911866
+  },
+  "recall_ldca_topn2": {
+   "value": 0.48344370860927155,
+   "ci_low": 0.4630782580634755,
+   "ci_high": 0.5043791172595521
+  },
+  "P1K": {
+   "value": 0.601,
+   "ci_low": 0.55,
+   "ci_high": 0.655
+  },
+  "hallucination_rate_topn2": {
+   "value": 0.0016803584764749813,
+   "ci_low": 0.0009917405104605242,
+   "ci_high": 0.0024510092870497252
+  },
+  "hallucination_rate": {
+   "value": 0.001440118925950014,
+   "ci_low": 0.0009219567471502784,
+   "ci_high": 0.001975612830525796
+  }
+ }
+}

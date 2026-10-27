@@ -1,0 +1,5 @@
+metric,value,ci_low,ci_high,n
+hallucination_rate,0.0,0.0,0.0,24308
+hallucination_rate_topn2,0.0,0.0,0.0,10732
+low_plddt_pocket_rate,0.0,0.0,0.0,24308
+n_hallucinated,0.0,,,2526

@@ -1,0 +1,51 @@
+{
+ "benchmark": {
+  "name": "dimer",
+  "kind": "dimer",
+  "path": "data/processed/dimer",
+  "cluster_sources": [
+   "dimer"
+  ],
+  "headline": [
+   "recall_DCC12_topn2@interface",
+   "recall_DCA4_topn2@interface",
+   "precision_DCC12_topn2@all",
+   "recall_DCC12_topn2@all"
+  ],
+  "split": "test",
+  "rules": "p2rank_strict",
+  "criteria": [
+   "DCA4",
+   "DCC4"
+  ],
+  "note": "PREREG O6 via scripts/eval_dimer.py (assembly input, J>=0.5 grouping = amendment A1, label-free collapse)",
+  "extras": []
+ },
+ "gt_path": "data/processed/dimer",
+ "pred_dir": "results/test/descriptive_fastcode/preds/dimer/desc.fast_all_s0/preds",
+ "n_boot": 1000,
+ "seed": 20261026,
+ "n_pred_missing": 0,
+ "headline": {
+  "recall_DCC12_topn2@interface": {
+   "value": 0.8559670781893004,
+   "ci_low": 0.8062908287434354,
+   "ci_high": 0.9043919559855814
+  },
+  "recall_DCA4_topn2@interface": {
+   "value": 0.7777777777777778,
+   "ci_low": 0.710521778584392,
+   "ci_high": 0.8436284251731406
+  },
+  "precision_DCC12_topn2@all": {
+   "value": 0.47396630934150075,
+   "ci_low": 0.44613024371454585,
+   "ci_high": 0.5032593682195624
+  },
+  "recall_DCC12_topn2@all": {
+   "value": 0.8327137546468402,
+   "ci_low": 0.7967758631313028,
+   "ci_high": 0.8665814457431588
+  }
+ }
+}

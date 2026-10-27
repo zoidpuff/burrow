@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# P2Rank datasets (COACH420, HOLO4K, ... + (mlig) variants), github.com/rdk/p2rank-datasets, pinned
+# commit. Used: coach420(mlig).ds and holo4k(mlig).ds (test sets O2a/O2b). No license file upstream;
+# structures derive from the PDB. Cite Krivak & Hoksza 2018 (J Cheminform 10:39). ~1.9 GB archive.
+source "$(dirname "$0")/_common.sh"
+COMMIT="${P2RANK_DS_COMMIT:-0236ecb38cbb60b89849a1ea36fbd9ee93f3e906}"   # master @ 2024-11-08
+OUT="$RAW/p2rank_datasets"
+mkdir -p "$OUT"
+fetch "https://codeload.github.com/rdk/p2rank-datasets/tar.gz/$COMMIT" "$OUT/p2rank-datasets-$COMMIT.tar.gz" "$([[ -z "${P2RANK_DS_COMMIT:-}" ]] && echo b608bc941d12087f60c94095e822edac53a0a8ce5fd6b7cf960254a383949ad2)"
+if [[ ! -d "$OUT/p2rank-datasets-$COMMIT" ]]; then
+  tar -xzf "$OUT/p2rank-datasets-$COMMIT.tar.gz" -C "$OUT"
+fi
+ln -sfn "p2rank-datasets-$COMMIT" "$OUT/current"
+echo "extracted to $OUT/current"

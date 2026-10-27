@@ -1,0 +1,51 @@
+{
+ "benchmark": {
+  "name": "dimer_chains",
+  "kind": "dimer",
+  "path": "data/processed/dimer",
+  "cluster_sources": [
+   "dimer"
+  ],
+  "headline": [
+   "recall_DCC12_topn2@interface",
+   "recall_DCA4_topn2@interface",
+   "precision_DCC12_topn2@all",
+   "recall_DCC12_topn2@all"
+  ],
+  "split": "test",
+  "rules": "p2rank_strict",
+  "criteria": [
+   "DCA4",
+   "DCC4"
+  ],
+  "note": "descriptive: isolated-chain inputs (eval_dimer --mode chain --chain-set all, as the baselines' dimer_chains)",
+  "extras": []
+ },
+ "gt_path": "data/processed/dimer",
+ "pred_dir": "results/test/descriptive_v2code/preds/dimer_chains/desc.v2chains_all_s0/preds",
+ "n_boot": 1000,
+ "seed": 20261026,
+ "n_pred_missing": 0,
+ "headline": {
+  "recall_DCC12_topn2@interface": {
+   "value": 0.695583596214511,
+   "ci_low": 0.6265325971848077,
+   "ci_high": 0.7580721463116871
+  },
+  "recall_DCA4_topn2@interface": {
+   "value": 0.5252365930599369,
+   "ci_low": 0.4471034293049697,
+   "ci_high": 0.6067221955896452
+  },
+  "precision_DCC12_topn2@all": {
+   "value": 0.38093797276853253,
+   "ci_low": 0.35285704968532844,
+   "ci_high": 0.40705673801567077
+  },
+  "recall_DCC12_topn2@all": {
+   "value": 0.8158522050059595,
+   "ci_low": 0.777888153053716,
+   "ci_high": 0.8484507411745872
+  }
+ }
+}

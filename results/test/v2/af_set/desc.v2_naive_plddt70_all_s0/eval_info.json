@@ -1,0 +1,59 @@
+{
+ "benchmark": {
+  "name": "af_set",
+  "kind": "sites",
+  "path": "data/processed/gt/af_set/sites.tsv",
+  "cluster_sources": [
+   "af_set"
+  ],
+  "headline": [
+   "recall_topn2",
+   "recall_ldca_topn2",
+   "P1K",
+   "hallucination_rate_topn2",
+   "hallucination_rate"
+  ],
+  "split": "test",
+  "rules": "p2rank_strict",
+  "criteria": [
+   "DCA4",
+   "DCC4"
+  ],
+  "note": "PREREG O5 (scripts/build_gt_af.py from Track C)",
+  "extras": [
+   "hallucination"
+  ]
+ },
+ "gt_path": "data/processed/gt/af_set/sites.tsv",
+ "pred_dir": "results/test/descriptive_v2code/preds/af_set/desc.v2_naive_plddt70_all_s0/preds",
+ "n_boot": 1000,
+ "seed": 20261026,
+ "n_pred_missing": 0,
+ "headline": {
+  "recall_topn2": {
+   "value": 0.6413411258074438,
+   "ci_low": 0.6215626441724227,
+   "ci_high": 0.6605834745849646
+  },
+  "recall_ldca_topn2": {
+   "value": 0.48427152317880795,
+   "ci_low": 0.4626500986314251,
+   "ci_high": 0.5058912608016827
+  },
+  "P1K": {
+   "value": 0.613,
+   "ci_low": 0.562975,
+   "ci_high": 0.667
+  },
+  "hallucination_rate_topn2": {
+   "value": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0
+  },
+  "hallucination_rate": {
+   "value": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0
+  }
+ }
+}
